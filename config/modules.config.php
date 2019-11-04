@@ -31,7 +31,8 @@ return [
     'Phpro\\DoctrineHydrationModule',
     'ZF\\Apigility\\Doctrine\\Server',
     'DoctrineORMModule',
+    'RB\\Sphinx\\Hmac\\Zend',
+    // 'RBHmac',
     'Application',
     'Soluti',
-    'RB\\Sphinx\\Hmac\\Zend',
 ];

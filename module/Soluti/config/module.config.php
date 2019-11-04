@@ -163,7 +163,7 @@ return [
                     'DELETE' => false,
                 ],
                 'entity' => [
-                    'GET' => true,
+                    'GET' => false,
                     'POST' => false,
                     'PUT' => false,
                     'PATCH' => false,
