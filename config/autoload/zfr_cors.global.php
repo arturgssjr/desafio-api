@@ -10,7 +10,7 @@ return [
          /**
           * Set the list of allowed origins domain with protocol.
           */
-         'allowed_origins' => ['http://websoluti.fastmvp.com.br'],
+         'allowed_origins' => ['http://web.desafiosoluti.com.br'],
 
          /**
           * Set the list of HTTP verbs.

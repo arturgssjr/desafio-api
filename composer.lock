@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98c48ab898d3dedd27e379be8e4efa56",
+    "content-hash": "f3f9e96088294390357bcb23db0db321",
     "packages": [
         {
             "name": "bshaffer/oauth2-server-php",
@@ -5145,7 +5145,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "rb/sphinx-hmac": 20,
         "rb/sphinx-hmac-zf2": 20
     },
     "prefer-stable": true,
