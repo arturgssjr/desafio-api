@@ -1,6 +1,6 @@
 <?php
 
-namespace Hmac\Factory;
+namespace Rbhmac\Factory;
 
 use Zend\EventManager\Event;
 

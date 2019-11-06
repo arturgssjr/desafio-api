@@ -7,7 +7,7 @@
 return [
     // Development time modules
     'modules' => [
-        'ZendDeveloperTools',
+        // 'ZendDeveloperTools',    
         'ZF\Apigility\Admin',
         'ZF\Apigility\Doctrine\Admin',
     ],

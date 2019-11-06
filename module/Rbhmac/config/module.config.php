@@ -3,14 +3,11 @@
 return [
     'service_manager' => [
         'factories' => [
-            'Rbhmac\HMAC' => 'Hmac\Factory\HMACFactory',
-            'Rbhmac\HMACSession' => 'Hmac\Factory\HMACSessionFactory',
+            'Rbhmac\HMAC' => 'Rbhmac\Factory\HMACFactory',
+            'Rbhmac\HMACSession' => 'Rbhmac\Factory\HMACSessionFactory',
         ],
     ],
     'rb_sphinx_hmac_server' => [
-        'auth'=> [
-            'apps' => ''
-        ],
         'selectors' => [
             //Default HMAC Selectors (Usa usuários do config]
             'HMAC' => 'Rbhmac\HMAC',
@@ -23,23 +20,16 @@ return [
             'Rbhmac\\HMAC' => [
                 'hash' => 'sha256',
                 'version' => 'v1',
-                'key' => 'RB\Sphinx\Hmac\Key\StaticKey',
             ],
             'Rbhmac\\HMACSession' => [
                 'hash' => 'sha256',
                 'version' => 'v1',
-                'key' => 'RB\Sphinx\Hmac\Key\StaticKey',
             ],
         ],
         'controllers' => [
             'Soluti\\V1\\Rest\\Certificados\\Controller' => [
-                'actions' => [
-                    'get' => [
-                        'selector' => 'HMAC',
-                        'adapter' => 'HMACHeaderAdapter',
-                        'key' => 'RB\Sphinx\Hmac\Key\StaticKey',
-                    ],
-                ],
+                'selector' => 'HMAC',
+                'adapter' => 'HMACHeaderAdapter',
             ],
         ],
     ],

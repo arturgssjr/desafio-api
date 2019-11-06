@@ -1,10 +1,9 @@
 <?php
-namespace Hmac;
+namespace Rbhmac;
 
 use Zend\Mvc\MvcEvent;
-use Hmac\Factory\EventFactory;
-use Hmac\Factory\ServiceLocatorFactory;
-use ZF\Apigility\Provider\ApigilityProviderInterface;
+use Rbhmac\Factory\EventFactory;
+use Rbhmac\Factory\ServiceLocatorFactory;
 
 class Module
 {

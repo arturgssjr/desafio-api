@@ -1,14 +1,14 @@
 <?php
-namespace Hmac\Factory;
+namespace Rbhmac\Factory;
 
-use RB\Sphinx\Hmac\HMAC;
+use RB\Sphinx\Hmac\HMACSession;
 use RB\Sphinx\Hmac\Hash\PHPHash;
 use RB\Sphinx\Hmac\Algorithm\HMACv0;
 use RB\Sphinx\Hmac\Algorithm\HMACv1;
 use RB\Sphinx\Hmac\Nonce\SimpleTSNonce;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
-class HMACFactory
+class HMACSessionFactory
 {
     /**
      * Create service
@@ -27,9 +27,9 @@ class HMACFactory
         ];
 
         //Selector version and hash config
-        if (isset($config["rb_sphinx_hmac_server"]["selectors_config"]["Rbhmac\HMAC"])) {
+        if (isset($config["rb_sphinx_hmac_server"]["selectors_config"]["Rbhmac\HMACSession"])) {
 
-            $selector = $config["rb_sphinx_hmac_server"]["selectors_config"]["Rbhmac\HMAC"];
+            $selector = $config["rb_sphinx_hmac_server"]["selectors_config"]["Rbhmac\HMACSession"];
             
             if (isset($selector["version"])) {
                 $settings["version"] = $selector["version"];
@@ -65,7 +65,8 @@ class HMACFactory
 
         //Get a nonce
         $nonce = new SimpleTSNonce();
+        $nonce2 = clone $nonce;
         
-        return new HMAC($algo, $hash, $key, $nonce);
+        return new HMACSession($algo, $hash, $key, $nonce, $nonce2);
     }
 }
