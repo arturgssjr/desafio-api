@@ -1,8 +1,9 @@
 <?php
-namespace Rbhmac\Factory;
+namespace Hmac\Factory;
 
 use RB\Sphinx\Hmac\HMACSession;
 use RB\Sphinx\Hmac\Hash\PHPHash;
+use RB\Sphinx\Hmac\Key\StaticKey;
 use RB\Sphinx\Hmac\Algorithm\HMACv0;
 use RB\Sphinx\Hmac\Algorithm\HMACv1;
 use RB\Sphinx\Hmac\Nonce\SimpleTSNonce;
@@ -27,7 +28,7 @@ class HMACSessionFactory
         ];
 
         //Selector version and hash config
-        if (isset($config["rb_sphinx_hmac_server"]["selectors_config"]["Rbhmac\HMACSession"])) {
+        if (isset($config["rb_sphinx_hmac_server"]["selectors_config"]["HRbhmac\HMACSession"])) {
 
             $selector = $config["rb_sphinx_hmac_server"]["selectors_config"]["Rbhmac\HMACSession"];
             
@@ -60,8 +61,7 @@ class HMACSessionFactory
         $hash = new PHPHash($settings["hash"]);
 
         //Create a key object
-        $keyName = "Rbhmac\\Key\\" . $settings["key"];
-        $key = new $keyName();
+        $key = new StaticKey($config['secret_key']);
 
         //Get a nonce
         $nonce = new SimpleTSNonce();

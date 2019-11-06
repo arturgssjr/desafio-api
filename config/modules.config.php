@@ -32,7 +32,7 @@ return [
     'ZF\\Apigility\\Doctrine\\Server',
     'DoctrineORMModule',
     'RB\\Sphinx\\Hmac\\Zend',
-    'Rbhmac',
+    'Hmac',
     'Application',
     'Soluti',
 ];

@@ -3,8 +3,8 @@
 return [
     'service_manager' => [
         'factories' => [
-            'Rbhmac\HMAC' => 'Rbhmac\Factory\HMACFactory',
-            'Rbhmac\HMACSession' => 'Rbhmac\Factory\HMACSessionFactory',
+            'Rbhmac\HMAC' => 'Hmac\Factory\HMACFactory',
+            'Rbhmac\HMACSession' => 'Hmac\Factory\HMACSessionFactory',
         ],
     ],
     'rb_sphinx_hmac_server' => [

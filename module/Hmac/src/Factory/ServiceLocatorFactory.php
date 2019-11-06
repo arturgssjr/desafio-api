@@ -1,5 +1,5 @@
 <?php
-namespace Rbhmac\Factory;
+namespace Hmac\Factory;
 
 use Zend\ServiceManager\ServiceManager;
 

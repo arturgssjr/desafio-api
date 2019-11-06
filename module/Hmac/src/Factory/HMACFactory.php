@@ -1,11 +1,11 @@
 <?php
-namespace Rbhmac\Factory;
+namespace Hmac\Factory;
 
 use RB\Sphinx\Hmac\HMAC;
 use RB\Sphinx\Hmac\Hash\PHPHash;
+use RB\Sphinx\Hmac\Key\StaticKey;
 use RB\Sphinx\Hmac\Algorithm\HMACv0;
 use RB\Sphinx\Hmac\Algorithm\HMACv1;
-use RB\Sphinx\Hmac\Key\StaticKey;
 use RB\Sphinx\Hmac\Nonce\SimpleTSNonce;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
